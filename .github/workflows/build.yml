@@ -12,13 +12,12 @@ name: Android CI
 on:
   push:
     branches: [ main ]
-    paths-ignore:  # Skip large binary files
+    paths-ignore:  # Skip binary files
       - '**/*.png'
       - '**/*.jpg'
       - '**/*.jpeg'
+      - '**/*.xml'
   pull_request:
     branches: [ main ]
   workflow_dispatch:  # Enable manual triggering
-  schedule:
-    - cron: '0 1 * * *'  # Daily build at 1am UTC
 >>>REPLACE
