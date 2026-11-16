@@ -4,6 +4,20 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose") version "1.9.22" apply false
 }
 
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 tasks.register("assembleDebugOnDevice") {
     doLast {
         println("""
