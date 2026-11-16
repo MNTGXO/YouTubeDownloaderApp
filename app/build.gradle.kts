@@ -36,6 +36,10 @@ android {
         }
         debug {
             applicationIdSuffix = ".debug"
+            // Add debug build optimizations
+            isDebuggable = true
+            isJniDebuggable = true
+            isRenderscriptDebuggable = true
         }
     }
 
