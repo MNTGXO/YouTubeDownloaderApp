@@ -16,10 +16,13 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+          cache: 'gradle'
 
-      - name: Setup Android SDK & accept licenses
+      - name: Setup Android SDK
         uses: android-actions/setup-android@v3
-        continue-on-error: true
+        with:
+          accept-android-licenses: true
+          android-sdk-path: ${{ github.workspace }}/android-sdk
 
       - name: Setup Gradle (with wrapper)
         if: hashFiles('gradlew') != ''
