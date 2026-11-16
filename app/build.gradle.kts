@@ -8,6 +8,18 @@ android {
     namespace = "com.mntgxo.ytdownloader"
     compileSdk = 35
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        isCoreLibraryDesugaringEnabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        isCoreLibraryDesugaringEnabled = true
+    }
+
     defaultConfig {
         applicationId = "com.mntgxo.ytdownloader"
         minSdk = 24
