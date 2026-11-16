@@ -10,6 +10,7 @@ on:
 name: Android CI
 
 on:
+  workflow_dispatch:  # Add manual trigger
   push:
     branches: [ main ]
     paths-ignore:  # Skip binary files
@@ -19,9 +20,6 @@ on:
       - '**/*.xml'
   pull_request:
     branches: [ main ]
-  workflow_dispatch:  # Enable manual triggering
-  schedule:
-    - cron: '0 1 * * *'  # Daily build at 1am UTC
 
 jobs:
   build:
